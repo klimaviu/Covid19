@@ -4,7 +4,7 @@ author: "Ugne Klimaviciute and Neringa Kieliute"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, error = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, message = FALSE, warning = FALSE)
 ```
 
 # **Final Project: Analysis of the Covid-19 impact on economic activity**
