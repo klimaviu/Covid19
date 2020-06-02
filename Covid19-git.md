@@ -7,20 +7,6 @@ This was a group project I had to do for university.
 ### 1\. Our country of choice to analyze was South Korea.
 
 ``` r
-library(tidyverse)
-library(tidyr)
-library(dplyr)
-library(readr)
-library(ggplot2)
-library(lubridate)
-library(stringr)
-library(parsedate)
-library(viridis)
-library(stargazer)
-library(knitr)
-library(sjPlot)
-library(rmarkdown)
-
 mobility <- read_csv("https://github.com/vzemlys/cda_course/raw/master/data/final_project/Global_Mobility_Report.csv") %>% 
   filter(country_region == "South Korea") %>% 
   rename("Date" = date,
@@ -110,7 +96,7 @@ Data %>%
   geom_line(aes(Date, Cases, color = Cases))
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ### New cases through time.
 
@@ -124,7 +110,7 @@ Data %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ### The largest jump in new cases in a day.
 
@@ -149,7 +135,7 @@ Data %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ### The largest jump in new deaths in a day.
 
@@ -174,7 +160,7 @@ Data %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ### Largest jump in recoveries:
 
@@ -200,7 +186,7 @@ Data %>%
   geom_line(aes(Date, Active), color = "red")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
@@ -212,7 +198,7 @@ Data %>%
   geom_smooth(aes(Date, R), color = "darkred", level = 0.65, fill = "orange")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ### R and days infectious.
 
@@ -228,7 +214,7 @@ Data %>%
   geom_smooth(aes(Date, R, color = days_infectious))
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -256,7 +242,7 @@ Data %>%
        y = "Percent change from baseline")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ### Death rate over time.
 
@@ -270,7 +256,7 @@ Data %>%
   geom_line()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ### Simple models which explain separate mobility indicator changes with Covid-19 cases data.
 
@@ -759,7 +745,7 @@ Data_Japan %>%
   geom_line(aes(Date, Cases, color = Cases))
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ### New cases through time.
 
@@ -775,7 +761,7 @@ Data_Japan %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 ### The largest jump in new cases in a day.
 
@@ -800,7 +786,7 @@ Data_Japan %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 ### Biggest jump in deaths in a single day
 
@@ -828,7 +814,7 @@ Data_Japan %>%
   scale_fill_viridis()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 ### Biggest jump in recoveries in a single day
 
@@ -857,7 +843,7 @@ Data_Japan %>%
   geom_line(aes(Date, Active), color = "red")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
@@ -873,7 +859,7 @@ Data_Japan %>%
   geom_smooth(aes(Date, R), color = "darkred")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ### R and days infectious.
 
@@ -884,7 +870,7 @@ Data_Japan %>%
   geom_smooth(aes(Date, R, color = days_infectious))
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -906,7 +892,7 @@ Data_Japan %>%
        y = "Percent change from baseline")
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ### Death rate over time.
 
@@ -920,7 +906,7 @@ Data_Japan %>%
   geom_line()
 ```
 
-![](Covid19-git_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ### Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
 

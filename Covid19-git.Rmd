@@ -13,7 +13,7 @@ This was a group project I had to do for university.
 
 ### 1. Our country of choice to analyze was South Korea.
 
-```{r}
+```{r, echo = FALSE}
 library(tidyverse)
 library(tidyr)
 library(dplyr)
@@ -27,7 +27,9 @@ library(stargazer)
 library(knitr)
 library(sjPlot)
 library(rmarkdown)
+```
 
+```{r}
 mobility <- read_csv("https://github.com/vzemlys/cda_course/raw/master/data/final_project/Global_Mobility_Report.csv") %>% 
   filter(country_region == "South Korea") %>% 
   rename("Date" = date,
