@@ -1,5 +1,6 @@
 ---
 output: github_document
+author: "Ugne Klimaviciute and Neringa Kieliute"
 ---
 
 ```{r setup, include=FALSE}
@@ -8,11 +9,7 @@ knitr::opts_chunk$set(echo = FALSE, error = FALSE, message = FALSE, warning = FA
 
 # **Final Project: Analysis of the Covid-19 impact on economic activity**
 
-###
-###
-###
-###
-
+This was a group project I had to do for university.
 
 ### 1. Our country of choice to analyze was South Korea.
 
@@ -29,6 +26,7 @@ library(viridis)
 library(stargazer)
 library(knitr)
 library(sjPlot)
+library(rmarkdown)
 
 mobility <- read_csv("https://github.com/vzemlys/cda_course/raw/master/data/final_project/Global_Mobility_Report.csv") %>% 
   filter(country_region == "South Korea") %>% 
@@ -100,15 +98,14 @@ Data <- full_join(ts, mobility) %>%
     Residential = residential_percent_change_from_baseline
   )
 
-
-
 theme_set(theme_minimal())
 
 ```
 ### 3. We did exploratory analysis of the data on different levels:
-###
 
 ###     Case growth over time.
+
+Cases grew in an upward trend, with a particulary steep slope around the beggining of March.
 
 ```{r}
 Data %>% 
@@ -117,6 +114,8 @@ Data %>%
 ```
 
 ###     New cases through time.
+
+The highest amount of new cases appeared during the end of February and beginning of March.
 
 ```{r}
 Data %>% 
@@ -234,7 +233,7 @@ Data %>%
   geom_line()
 ```
 
-### 4. & 5. Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
+### Simple models which explain separate mobility indicator changes with Covid-19 cases data.
 
 ```{r}
 test <- Data %>% filter(Date >= "2020-05-05")
@@ -272,7 +271,9 @@ res <- bind_cols(test2, pred)
 kable(head(res[, order(names(res))], 15))
 ```
 
-The forecasts do not appear to be extremely accurate for South Korea.
+The forecasts do not appear to be extremely accurate for South Korea. We mainly predicted lower amounts for the first half except for workplaces which seems that we overpredicted.If we look at the second half, our predictions are a bit more similar, except for workspaces - it's still a big difference.
+
+The reason for such mispredictions might be that South Korea moved onto an 'everyday life quarantine' scheme at the start of May and we didn't take into account effects that it might have.
 
 ### 7. For comparisons we picked a second country that was quite culturally and geographically similar - Japan.
 
@@ -352,6 +353,8 @@ Data_Japan <- full_join(ts_Japan, mobility_Japan) %>%
 
 ### Case growth over time.
 
+Very interestingly, Japan had a slower case growth at the start compared to South Korea. The trend started to rapidly increase only in April.
+
 ```{r}
 Data_Japan %>% 
   ggplot()+
@@ -360,6 +363,8 @@ Data_Japan %>%
 ```
 
 ### New cases through time.
+
+The highest amounts of new cases seem to have appeared during the month of April (while for South Korea it was March). There is also a large negative outlier at the end of April, which was probably a data entry error.
 
 ```{r}
 Data_Japan %>% 
@@ -403,7 +408,7 @@ kable(maxdeaths_jap,
 
 ### Recoveries.
 
-Japan started recovering later than South Korea.
+Japan started recovering later than South Korea. There is a suspiciously large outlier on the 10th of May which was 2221 recoveries.
 
 ```{r}
 Data_Japan %>% 
@@ -437,6 +442,8 @@ Data_Japan %>%
 ```
 
 ### R by day (the average number of people infected by a single infectious individual by day).
+
+The R trend is almost completely inverted compared to South Korea which had a U shape (it was going downward ar first and then started to go up) but in Japan it's inverted (was going up at first and then started going down rapidly).
 
 ```{r}
 Data_Japan %>% 
@@ -475,6 +482,8 @@ Data_Japan %>%
 ```
 
 ### Death rate over time.
+
+For South Korea, the death rate over a longer term seemed to have an upward slope, but for Japan it has a big dent close to the middle of April and starts going up again.
 
 ```{r}
 Data_Japan %>%

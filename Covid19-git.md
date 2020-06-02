@@ -1,13 +1,8 @@
+Ugne Klimaviciute and Neringa Kieliute
 
 # **Final Project: Analysis of the Covid-19 impact on economic activity**
 
-### 
-
-### 
-
-### 
-
-### 
+This was a group project I had to do for university.
 
 ### 1\. Our country of choice to analyze was South Korea.
 
@@ -20,15 +15,19 @@ environments and etc.
 
 ### 3\. We did exploratory analysis of the data on different levels:
 
-### 
-
 ### Case growth over time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+Cases grew in an upward trend, with a particulary steep slope around the
+beggining of March.
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ### New cases through time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+The highest amount of new cases appeared during the end of February and
+beginning of March.
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ### The largest jump in new cases in a day.
 
@@ -38,7 +37,7 @@ environments and etc.
 
 ### Daily deaths.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ### The largest jump in new deaths in a day.
 
@@ -48,7 +47,7 @@ environments and etc.
 
 ### Recoveries.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ### Largest jump in recoveries:
 
@@ -58,11 +57,11 @@ environments and etc.
 
 ### Active vs Recovered cases.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### R and days infectious.
 
@@ -71,7 +70,7 @@ expect an average person to be able to transmit the virus. In reality,
 days infectious may be even longer than that - according to Simas
 Kucinskas’ research paper, the actual number may be closer to 23 days.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -88,7 +87,7 @@ Korea was fairly effective at handling the covid crisis right from the
 beginning, meaning that restrictions could be raised earlier than in
 other countries.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### Death rate over time.
 
@@ -96,9 +95,9 @@ The change in death rate is an interesting variable to look at. It could
 reflect changes in the healthcare system’s ability to care for the
 critically ill, or changes in testing.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
-### 4\. & 5. Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
+### Simple models which explain separate mobility indicator changes with Covid-19 cases data.
 
 <table style="border-collapse:collapse; border:none;">
 
@@ -462,7 +461,15 @@ accurate.
 |              7 |           9.891318 |    36 |  49.15201 |           2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
 |              7 |           9.891318 |    36 |  49.15201 |           2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
 
-The forecasts do not appear to be extremely accurate for South Korea.
+The forecasts do not appear to be extremely accurate for South Korea. We
+mainly predicted lower amounts for the first half except for workplaces
+which seems that we overpredicted.If we look at the second half, our
+predictions are a bit more similar, except for workspaces - it’s still a
+big difference.
+
+The reason for such mispredictions might be that South Korea moved onto
+an ‘everyday life quarantine’ scheme at the start of May and we didn’t
+take into account effects that it might have.
 
 ### 7\. For comparisons we picked a second country that was quite culturally and geographically similar - Japan.
 
@@ -472,11 +479,19 @@ The forecasts do not appear to be extremely accurate for South Korea.
 
 ### Case growth over time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+Very interestingly, Japan had a slower case growth at the start compared
+to South Korea. The trend started to rapidly increase only in April.
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 ### New cases through time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+The highest amounts of new cases seem to have appeared during the month
+of April (while for South Korea it was March). There is also a large
+negative outlier at the end of April, which was probably a data entry
+error.
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ### The largest jump in new cases in a day.
 
@@ -486,7 +501,7 @@ The forecasts do not appear to be extremely accurate for South Korea.
 
 ### Daily deaths.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 ### Biggest jump in deaths in a single day
 
@@ -496,9 +511,10 @@ The forecasts do not appear to be extremely accurate for South Korea.
 
 ### Recoveries.
 
-Japan started recovering later than South Korea.
+Japan started recovering later than South Korea. There is a suspiciously
+large outlier on the 10th of May which was 2221 recoveries.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 ### Biggest jump in recoveries in a single day
 
@@ -511,15 +527,20 @@ Japan started recovering later than South Korea.
 We can see that recovered cases only surpassed active cases in May,
 unlike in South Korea, where that happened even prior to April.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+The R trend is almost completely inverted compared to South Korea which
+had a U shape (it was going downward ar first and then started to go up)
+but in Japan it’s inverted (was going up at first and then started going
+down rapidly).
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ### R and days infectious.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -530,11 +551,15 @@ Interest in Grocery and Pharmacy stores has still been declining, which
 is probably related to the fact that Japan started getting hold of the
 situation later than South Korea did.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](Covid19-git_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ### Death rate over time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+For South Korea, the death rate over a longer term seemed to have an
+upward slope, but for Japan it has a big dent close to the middle of
+April and starts going up again.
+
+![](Covid19-git_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ### Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
 
