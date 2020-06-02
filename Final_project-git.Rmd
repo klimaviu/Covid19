@@ -142,7 +142,11 @@ Data %>%
   ggplot()+
   geom_col(aes(Date, New_deaths, fill = New_deaths))+
   scale_fill_viridis()
+```
 
+### The largest jump in new deaths in a day.
+
+```{r}
 maxdeaths <- Data[which.max(Data$New_deaths),] %>% 
   select(Date, New_deaths)
 
@@ -157,7 +161,11 @@ Data %>%
   ggplot()+
   geom_col(aes(Date, New_recoveries, fill = New_recoveries))+
   scale_fill_viridis()
+```
 
+### Largest jump in recoveries:
+
+```{r}
 maxrecoveries <- Data[which.max(Data$New_recoveries),] %>% 
   select(Date, New_recoveries)
 
@@ -248,7 +256,7 @@ tab_model(mod_1, mod_2, mod_3, mod_4, mod_5, mod_6, p.style = "stars", show.ci =
 
 ```
 
-The Covid-19 data explain different mobility indicators differently. Not for all of the indicators the Cases variable is significant (note the lack of stars). They have different R-squareds, meaning that Retail_Recr and Transit both have the highest (around 0.6) which indicates that their fit is quite ok. But for example Workplaces have an incredibly low R-squared (0.02) which means that the fit is not accurate.
+The Covid-19 data explain different mobility indicators differently. Not for all of the indicators the Cases variable is significant (note the lack of stars). They have different R-squared values, meaning that Retail_Recr and Transit both have the highest (around 0.6) which indicates that their fit is quite ok. But, for example, Workplaces have an incredibly low R-squared (0.02) which means that the fit is not accurate.
 
  
 
@@ -263,6 +271,7 @@ test2 <- test %>% select(Retail_Recr, Grocery_Pharm, Parks, Transit, Workplaces,
 res <- bind_cols(test2, pred)
 kable(head(res[, order(names(res))], 15))
 ```
+
 The forecasts do not appear to be extremely accurate for South Korea.
 
 ### 7. For comparisons we picked a second country that was quite culturally and geographically similar - Japan.
@@ -339,7 +348,6 @@ Data_Japan <- full_join(ts_Japan, mobility_Japan) %>%
 ``` 
 
 ### We did exploratory analysis of the data on different levels:
-###
 
 
 ### Case growth over time.
@@ -497,13 +505,6 @@ stargazer(mod_1_Japan, mod_2_Japan, mod_3_Japan, mod_4_Japan, mod_5_Japan, mod_6
 
 ```
 
-The Covid-19 data explain different mobility indicators differently. Contrary to South Korea models, for all of the indicators the Cases variable is significant (note the 3 stars). Compared to South Korea, the R squareds give very different results: for SK Retail_Recr had a high R-squared which indicated that the fit was quite ok, but for Japan this R-squared is very low.
-
-And, very interestingly, Workplaces for South Korea had an incredibly low R-squared (0.02) which meant that the fit is bad, but for Japan the R-squared here is very high meaning that the fit is good.
-
-Also, in the case of Japan, the fit of Residential is very good.
-
-
 ###  We used the models for forecasting. The forecasts were ...
 
 ```{r}
@@ -523,7 +524,7 @@ Our forecast appears to have worked significantly better for Japan than it did f
 
 ### In general when we compare our South Korea and Japan results, we can see that:
 * Japan overall has more cases but the growth was slower and more controlled at the beggining unlike in South Korea.
-* More people died at the beggining in South Korea where in Japan the majority of deaths accured in later periods. Similar trend is for recoveries.
+* More people died at the begining in South Korea where in Japan the majority of deaths accured in later periods. Similar trend is for recoveries.
 * The R trend is almost completely inverted between these two countries: in South Korea it's U shaped (it was going downward ar first and then started to go up) but in Japan it's inverted (was going up at first and then started rapidly going down).
 * Movement changes over time in Japan have more significant longer term slopes where in South Korea over time they stay almost in the same lane.
 * The death rate in South Korea seems to keep going up since March, but in Japan it had a dent (was downward sloping) in the middle of April.

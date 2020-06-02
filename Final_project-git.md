@@ -40,13 +40,17 @@ environments and etc.
 
 ![](Final_project-git_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
+### The largest jump in new deaths in a day.
+
 | Date       | New deaths |
 | :--------- | ---------: |
 | 2020-03-02 |         11 |
 
 ### Recoveries.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+### Largest jump in recoveries:
 
 | Date       | New recoveries |
 | :--------- | -------------: |
@@ -54,11 +58,11 @@ environments and etc.
 
 ### Active vs Recovered cases.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### R and days infectious.
 
@@ -67,7 +71,7 @@ expect an average person to be able to transmit the virus. In reality,
 days infectious may be even longer than that - according to Simas
 Kucinskas’ research paper, the actual number may be closer to 23 days.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -84,7 +88,7 @@ Korea was fairly effective at handling the covid crisis right from the
 beginning, meaning that restrictions could be raised earlier than in
 other countries.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### Death rate over time.
 
@@ -92,7 +96,7 @@ The change in death rate is an interesting variable to look at. It could
 reflect changes in the healthcare system’s ability to care for the
 critically ill, or changes in testing.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ### 4\. & 5. Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
 
@@ -432,32 +436,33 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 
 The Covid-19 data explain different mobility indicators differently. Not
 for all of the indicators the Cases variable is significant (note the
-lack of stars). They have different R-squareds, meaning that
+lack of stars). They have different R-squared values, meaning that
 Retail\_Recr and Transit both have the highest (around 0.6) which
-indicates that their fit is quite ok. But for example Workplaces have an
-incredibly low R-squared (0.02) which means that the fit is not
+indicates that their fit is quite ok. But, for example, Workplaces have
+an incredibly low R-squared (0.02) which means that the fit is not
 accurate.
 
 ### 6\. We used the models for forecasting. The forecasts were …
 
-|   Grocery\_Pharm | Grocery\_Pharm\_pr |    Parks |  Parks\_pr |    Residential | Residential\_pr | Retail\_Recr | Retail\_Recr\_pr | Transit | Transit\_pr | Workplaces | Workplaces\_pr |
-| ---------------: | -----------------: | -------: | ---------: | -------------: | --------------: | -----------: | ---------------: | ------: | ----------: | ---------: | -------------: |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|               23 |           9.811291 |      114 |   48.95736 |             14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                9 |           9.895114 |       48 |   49.11842 |              3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
-|                7 |           9.891318 |       36 |   49.15201 |              2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
-|                7 |           9.891318 |       36 |   49.15201 |              2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
-|                7 |           9.891318 |       36 |   49.15201 |              2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
-| The forecasts do | not appear to be e | xtremely | accurate f | or South Korea |               . |              |                  |         |             |            |                |
+| Grocery\_Pharm | Grocery\_Pharm\_pr | Parks | Parks\_pr | Residential | Residential\_pr | Retail\_Recr | Retail\_Recr\_pr | Transit | Transit\_pr | Workplaces | Workplaces\_pr |
+| -------------: | -----------------: | ----: | --------: | ----------: | --------------: | -----------: | ---------------: | ------: | ----------: | ---------: | -------------: |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|             23 |           9.811291 |   114 |  48.95736 |          14 |        5.129596 |           13 |       \-7.779660 |    \-14 |  \-7.770808 |       \-56 |     \-10.78662 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              9 |           9.895114 |    48 |  49.11842 |           3 |        5.109794 |         \-10 |       \-7.682633 |     \-4 |  \-7.690474 |        \-1 |     \-10.81089 |
+|              7 |           9.891318 |    36 |  49.15201 |           2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
+|              7 |           9.891318 |    36 |  49.15201 |           2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
+|              7 |           9.891318 |    36 |  49.15201 |           2 |        5.111053 |          \-7 |       \-7.687218 |     \-4 |  \-7.696744 |        \-1 |     \-10.80524 |
+
+The forecasts do not appear to be extremely accurate for South Korea.
 
 ### 7\. For comparisons we picked a second country that was quite culturally and geographically similar - Japan.
 
@@ -465,15 +470,13 @@ accurate.
 
 ### We did exploratory analysis of the data on different levels:
 
-### 
-
 ### Case growth over time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 ### New cases through time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ### The largest jump in new cases in a day.
 
@@ -483,7 +486,7 @@ accurate.
 
 ### Daily deaths.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 ### Biggest jump in deaths in a single day
 
@@ -495,7 +498,7 @@ accurate.
 
 Japan started recovering later than South Korea.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 ### Biggest jump in recoveries in a single day
 
@@ -508,15 +511,15 @@ Japan started recovering later than South Korea.
 We can see that recovered cases only surpassed active cases in May,
 unlike in South Korea, where that happened even prior to April.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ### R by day (the average number of people infected by a single infectious individual by day).
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ### R and days infectious.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ### Movement changes over time.
 
@@ -527,11 +530,11 @@ Interest in Grocery and Pharmacy stores has still been declining, which
 is probably related to the fact that Japan started getting hold of the
 situation later than South Korea did.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ### Death rate over time.
 
-![](Final_project-git_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](Final_project-git_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ### Simple models which explain seperate mobility indicator changes with Covid-19 cases data.
 
@@ -560,19 +563,6 @@ situation later than South Korea did.
     ## ============================================================================================================
     ## Note:                                                                            *p<0.1; **p<0.05; ***p<0.01
 
-The Covid-19 data explain different mobility indicators differently.
-Contrary to South Korea models, for all of the indicators the Cases
-variable is significant (note the 3 stars). Compared to South Korea, the
-R squareds give very different results: for SK Retail\_Recr had a high
-R-squared which indicated that the fit was quite ok, but for Japan this
-R-squared is very low.
-
-And, very interestingly, Workplaces for South Korea had an incredibly
-low R-squared (0.02) which meant that the fit is bad, but for Japan the
-R-squared here is very high meaning that the fit is good.
-
-Also, in the case of Japan, the fit of Residential is very good.
-
 ### We used the models for forecasting. The forecasts were …
 
 | Grocery\_Pharm | Grocery\_Pharm\_pr | Parks | Parks\_pr | Residential | Residential\_pr | Retail\_Recr | Retail\_Recr\_pr | Transit | Transit\_pr | Workplaces | Workplaces\_pr |
@@ -600,7 +590,7 @@ it did for South Korea.
 
   - Japan overall has more cases but the growth was slower and more
     controlled at the beggining unlike in South Korea.
-  - More people died at the beggining in South Korea where in Japan the
+  - More people died at the begining in South Korea where in Japan the
     majority of deaths accured in later periods. Similar trend is for
     recoveries.
   - The R trend is almost completely inverted between these two
