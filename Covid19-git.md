@@ -1,6 +1,6 @@
 Ugne Klimaviciute and Neringa Kieliute
 
-# **Final Project: Analysis of the Covid-19 impact on economic activity**
+# **Final Project: Analysis of the Covid-19 impact on movement activity**
 
 This was a group project I had to do for university.
 
